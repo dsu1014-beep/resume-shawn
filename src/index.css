@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-primary, "Inter", "Noto Sans TC", ui-sans-serif, system-ui, sans-serif);
+  --font-mono: var(--font-secondary, "JetBrains Mono", ui-monospace, SFMono-Regular, monospace);
+  
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+
+  --color-surface-50: var(--surface-50);
+  --color-surface-100: var(--surface-100);
+  --color-surface-200: var(--surface-200);
+  --color-surface-300: var(--surface-300);
+  --color-surface-400: var(--surface-400);
+  --color-surface-500: var(--surface-500);
+  --color-surface-600: var(--surface-600);
+  --color-surface-700: var(--surface-700);
+  --color-surface-800: var(--surface-800);
+  --color-surface-900: var(--surface-900);
+
+  --radius-sm: var(--theme-radius-sm);
+  --radius-md: var(--theme-radius-md);
+  --radius-lg: var(--theme-radius-lg);
+  --radius-xl: var(--theme-radius-xl);
+  --radius-2xl: var(--theme-radius-2xl);
+  --radius-3xl: var(--theme-radius-3xl);
+  
+  --shadow-sm: var(--theme-shadow-sm);
+  --shadow-md: var(--theme-shadow-md);
+  --shadow-lg: var(--theme-shadow-lg);
+  --shadow-xl: var(--theme-shadow-xl);
+  --shadow-2xl: var(--theme-shadow-2xl);
+}
+
+@layer base {
+  :root {
+    /* Classic Professional: Blue & Slate */
+    --brand-50: #eff6ff; --brand-100: #dbeafe; --brand-200: #bfdbfe; --brand-300: #93c5fd;
+    --brand-400: #60a5fa; --brand-500: #3b82f6; --brand-600: #2563eb; --brand-700: #1d4ed8;
+    --brand-800: #1e40af; --brand-900: #1e3a8a; --brand-950: #172554;
+    
+    --surface-50: #f8fafc; --surface-100: #f1f5f9; --surface-200: #e2e8f0; --surface-300: #cbd5e1;
+    --surface-400: #94a3b8; --surface-500: #64748b; --surface-600: #475569; --surface-700: #334155;
+    --surface-800: #1e293b; --surface-900: #0f172a;
+
+    --font-primary: "Inter", "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+    --font-secondary: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    
+    --theme-radius-sm: 0.125rem;
+    --theme-radius-md: 0.375rem;
+    --theme-radius-lg: 0.5rem;
+    --theme-radius-xl: 0.75rem;
+    --theme-radius-2xl: 1rem;
+    --theme-radius-3xl: 1.5rem;
+    
+    --theme-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --theme-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --theme-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --theme-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --theme-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  }
+
+  .theme-emerald {
+    /* Minimal Tech: Emerald & Zinc, Sharp Corners, Monospace */
+    --brand-50: #ecfdf5; --brand-100: #d1fae5; --brand-200: #a7f3d0; --brand-300: #6ee7b7;
+    --brand-400: #34d399; --brand-500: #10b981; --brand-600: #059669; --brand-700: #047857;
+    --brand-800: #065f46; --brand-900: #064e3b; --brand-950: #022c22;
+
+    --surface-50: #fafafa; --surface-100: #f4f4f5; --surface-200: #e4e4e7; --surface-300: #d4d4d8;
+    --surface-400: #a1a1aa; --surface-500: #71717a; --surface-600: #52525b; --surface-700: #3f3f46;
+    --surface-800: #27272a; --surface-900: #18181b;
+
+    --font-primary: "JetBrains Mono", "Noto Sans TC", ui-monospace, SFMono-Regular, monospace;
+    --font-secondary: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+    /* Sharp corners everywhere */
+    --theme-radius-sm: 0px;
+    --theme-radius-md: 0px;
+    --theme-radius-lg: 0px;
+    --theme-radius-xl: 0px;
+    --theme-radius-2xl: 0px;
+    --theme-radius-3xl: 0px;
+
+    /* Flat / Hard shadows */
+    --theme-shadow-sm: 2px 2px 0px 0px rgb(0 0 0 / 0.1);
+    --theme-shadow-md: 4px 4px 0px 0px rgb(0 0 0 / 0.1);
+    --theme-shadow-lg: 6px 6px 0px 0px rgb(0 0 0 / 0.1);
+    --theme-shadow-xl: 8px 8px 0px 0px rgb(0 0 0 / 0.1);
+    --theme-shadow-2xl: 12px 12px 0px 0px rgb(0 0 0 / 0.1);
+  }
+
+  .theme-orange {
+    /* Warm Creative: Orange & Stone, Serif font, ultra rounded corners */
+    --brand-50: #fff7ed; --brand-100: #ffedd5; --brand-200: #fed7aa; --brand-300: #fdba74;
+    --brand-400: #fb923c; --brand-500: #f97316; --brand-600: #ea580c; --brand-700: #c2410c;
+    --brand-800: #9a3412; --brand-900: #7c2d12; --brand-950: #431407;
+
+    --surface-50: #fafaf9; --surface-100: #f5f5f4; --surface-200: #e7e5e4; --surface-300: #d6d3d1;
+    --surface-400: #a8a29e; --surface-500: #78716c; --surface-600: #57534e; --surface-700: #44403c;
+    --surface-800: #292524; --surface-900: #1c1917;
+
+    --font-primary: "Noto Serif TC", "Playfair Display", ui-serif, Georgia, serif;
+    --font-secondary: "Inter", "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
+
+    /* Very rounded */
+    --theme-radius-sm: 0.5rem;
+    --theme-radius-md: 0.75rem;
+    --theme-radius-lg: 1rem;
+    --theme-radius-xl: 1.5rem;
+    --theme-radius-2xl: 2rem;
+    --theme-radius-3xl: 3rem;
+
+    /* Soft diffused shadows */
+    --theme-shadow-sm: 0 2px 10px -2px rgb(0 0 0 / 0.04);
+    --theme-shadow-md: 0 8px 24px -4px rgb(0 0 0 / 0.04), 0 4px 10px -2px rgb(0 0 0 / 0.02);
+    --theme-shadow-lg: 0 12px 32px -4px rgb(0 0 0 / 0.06), 0 6px 14px -4px rgb(0 0 0 / 0.03);
+    --theme-shadow-xl: 0 20px 48px -8px rgb(0 0 0 / 0.08), 0 10px 24px -8px rgb(0 0 0 / 0.04);
+    --theme-shadow-2xl: 0 32px 64px -12px rgb(0 0 0 / 0.1);
+  }
+
+  .theme-cupertino {
+    /* Apple / Cupertino: Minimal, Tech, Comfortable */
+    --brand-50: #f5f5f7; --brand-100: #e8e8ed; --brand-200: #d2d2d7; --brand-300: #86868b;
+    --brand-400: #424245; --brand-500: #2997ff; --brand-600: #0066cc; --brand-700: #004499;
+    --brand-800: #002266; --brand-900: #001133; --brand-950: #000000;
+
+    --surface-50: #ffffff; --surface-100: #f5f5f7; --surface-200: #e8e8ed; --surface-300: #d2d2d7;
+    --surface-400: #a1a1a6; --surface-500: #86868b; --surface-600: #424245; --surface-700: #333336;
+    --surface-800: #1d1d1f; --surface-900: #000000;
+
+    --font-primary: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Noto Sans TC", sans-serif;
+    --font-secondary: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+    /* Squircle-like radii */
+    --theme-radius-sm: 0.3rem;
+    --theme-radius-md: 0.5rem;
+    --theme-radius-lg: 0.8rem;
+    --theme-radius-xl: 1.25rem;
+    --theme-radius-2xl: 1.75rem;
+    --theme-radius-3xl: 2.5rem;
+
+    /* Very soft, large shadows */
+    --theme-shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+    --theme-shadow-md: 0 4px 10px rgba(0,0,0,0.05);
+    --theme-shadow-lg: 0 10px 24px rgba(0,0,0,0.05);
+    --theme-shadow-xl: 0 20px 40px rgba(0,0,0,0.06);
+    --theme-shadow-2xl: 0 30px 60px rgba(29, 29, 31, 0.08); /* 1d1d1f is Apple dark grey */
+  }
+
+  .theme-apple-dark {
+    /* Apple Dark Mode: Minimal Tech, Comfort, Fancy */
+    --brand-50: #623840; --brand-100: #754049; --brand-200: #8c4a55; --brand-300: #a75c68;
+    --brand-400: #b76e79; --brand-500: #c1818a; --brand-600: #cb949b; --brand-700: #e0bfb8; /* rose gold / soft pink accents */
+    --brand-800: #faeded; --brand-900: #fdf8f8; --brand-950: #ffffff;
+
+    /* Pitch black + dark greys */
+    --surface-50: #000000; --surface-100: #1c1c1e; --surface-200: #2c2c2e; --surface-300: #3a3a3c;
+    --surface-400: #48484a; --surface-500: #636366; --surface-600: #8e8e93; --surface-700: #aeaeae;
+    --surface-800: #d1d1d6; --surface-900: #f5f5f7;
+
+    --font-primary: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Inter", "Noto Sans TC", sans-serif;
+    --font-secondary: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+    /* Squircle-like radii */
+    --theme-radius-sm: 0.5rem;
+    --theme-radius-md: 0.75rem;
+    --theme-radius-lg: 1rem;
+    --theme-radius-xl: 1.5rem;
+    --theme-radius-2xl: 2rem;
+    --theme-radius-3xl: 3rem;
+
+    /* Deep dynamic shadows / glowing elements */
+    --theme-shadow-sm: 0 1px 2px rgba(255,255,255,0.02);
+    --theme-shadow-md: 0 4px 12px rgba(0,0,0,0.5);
+    --theme-shadow-lg: 0 10px 30px rgba(0,0,0,0.6);
+    --theme-shadow-xl: 0 20px 40px rgba(0,0,0,0.8);
+    --theme-shadow-2xl: 0 0 50px rgba(183,110,121,0.15); /* rose gold ambient glow */
+  }
+
+  body {
+    @apply font-sans bg-surface-50 text-surface-900 selection:bg-brand-100 selection:text-brand-900 transition-all duration-500;
+  }
+}
